@@ -9,7 +9,7 @@ public class PaddleScript : MonoBehaviour
     private float minX = -20f;
     private float maxX = 20f;
     bool moveRight = true;
-
+    private 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,12 +23,12 @@ public class PaddleScript : MonoBehaviour
         if (PaddleT.position.x > maxX)
         {
             moveRight = false;
-            Debug.Log("full right");
+           // Debug.Log("full right");
         }
         if (PaddleT.position.x < minX)
         {
             moveRight = true;
-            Debug.Log("full left");
+            //Debug.Log("full left");
         }
         if (moveRight)
         {
