@@ -9,26 +9,29 @@ public class BallScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
     
     // Update is called once per frame
     void Update()
     {
-        Vector3 vel = new Vector3(0, 0, 0);
+        Vector2 vel = new Vector2(0, BallRB.linearVelocity.y);
         //Ball movement via <- -> arrows
         if (Input.GetKey(KeyCode.RightArrow))
         {
             vel.x = Bspeed;
+            BallRB.linearVelocity = vel;
             //Debug.Log("yes");
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             vel.x = -Bspeed;
+            BallRB.linearVelocity = vel;
             //Debug.Log(Input.GetKey(KeyCode.LeftArrow));
         }
-        BallRB.linearVelocity = vel;
-       
+       else
+        {
+            BallRB.linearVelocity = new Vector2(0, BallRB.linearVelocity.y);
+        }
     }
 }
