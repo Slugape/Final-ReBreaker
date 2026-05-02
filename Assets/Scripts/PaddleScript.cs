@@ -6,8 +6,8 @@ public class PaddleScript : MonoBehaviour
     //For Paddle
     public Transform PaddleT;
     public float Pspeed = 8;
-    public float minX = -10f;
-    public float maxX = 10f;
+    private float minX = -20f;
+    private float maxX = 20f;
     bool moveRight = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
