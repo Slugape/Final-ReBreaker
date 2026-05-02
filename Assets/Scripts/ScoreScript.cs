@@ -14,6 +14,6 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         //Score text displayed via Score int^
-        SText.text = "Score:" + Score.ToString();
+        SText.text = "Score " + Score.ToString();
     }
 }
