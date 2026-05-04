@@ -6,9 +6,11 @@ public class BallScript : MonoBehaviour
     //For Ball
     public Rigidbody2D BallRB;
     public float Bspeed = 18f;
-    public bool rocketOn = false;
-    public bool rocketSpawn = false;
-    public GameObject Ballrocket;
+    public bool RocketOn = false;
+    private bool RocketSpawn = false;
+    public GameObject BallRocket;
+    public GameObject RocketPFB;
+    public GameObject RocketShot;
 
     private float radius = 1.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,7 +40,7 @@ public class BallScript : MonoBehaviour
             //Debug.Log("yes");
         }
 
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.S))
         {
             vel.x = -Bspeed;
             BallRB.linearVelocity = vel;
@@ -49,29 +51,39 @@ public class BallScript : MonoBehaviour
             BallRB.linearVelocity = new Vector2(0, BallRB.linearVelocity.y);
         }
         
-        if (rocketOn == true && rocketSpawn == false)
+        if (RocketOn == true && RocketSpawn == false)
         {
-            Ballrocket = Instantiate(Ballrocket, new Vector2(transform.position.x, transform.position.y +1.5f), Quaternion.identity);
-            rocketSpawn = true;
+            BallRocket = Instantiate(RocketPFB, new Vector2(transform.position.x, transform.position.y +1.5f), Quaternion.identity);
+            RocketSpawn = true;
             //Debug.Log("rSpawn");
             
         }
 
-        if (rocketSpawn == true)
+        if (RocketSpawn == true)
         {
             //Math for following mouse
             Vector3 FollowMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = FollowMousePos - Ballrocket.transform.position;
-            
-            float angle = Mathf.Atan2(direction.y,direction.x) * Mathf.Rad2Deg;
-            Ballrocket.transform.rotation = Quaternion.Euler(0,0, angle - 90);
+            Vector2 direction = FollowMousePos - BallRocket.transform.position;
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            BallRocket.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             //Debug.Log(angle);
-            
-            //Follows Ball orbit
-            Ballrocket.transform.position = new Vector2(transform.position.x + radius * Mathf.Cos(angle * Mathf.Deg2Rad), 
+
+            //Follows Ball orbit via polar to cartesian conversion
+            BallRocket.transform.position = new Vector2(
+                transform.position.x + radius * Mathf.Cos(angle * Mathf.Deg2Rad),
                 transform.position.y + radius * Mathf.Sin(angle * Mathf.Deg2Rad));
             
+            //Rocket shot
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(RocketShot, BallRocket.transform.position, BallRocket.transform.rotation);
+                Destroy(BallRocket);
+                BallRocket = null;
+                RocketSpawn = false;
+                RocketOn = false;
+                
+            }
         }
-        
     }
 }

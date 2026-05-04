@@ -765,9 +765,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainScript
   BallRB: {fileID: 692627355}
   Bspeed: 20
-  rocketOn: 0
-  rocketSpawn: 0
-  Ballrocket: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
+  RocketOn: 0
+  RocketSpawn: 0
+  BallRocket: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
+  RocketPFB: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
+  RocketShot: {fileID: 3723346684577995324, guid: afbd6fe5a2b1a4cc78cbefa1e36131d6, type: 3}
 --- !u!58 &692627357
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1255,6 +1257,71 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &1806937337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_Name
+      value: Brick1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: RocketPF
+      value: 
+      objectReference: {fileID: 3723346684577995324, guid: eec8cb47804534ead836b63313c79dcb, type: 3}
+    - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: rocketPF
+      value: 
+      objectReference: {fileID: 3723346684577995324, guid: eec8cb47804534ead836b63313c79dcb, type: 3}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
 --- !u!1 &1869728412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,6 +1671,10 @@ PrefabInstance:
       value: Brick1
       objectReference: {fileID: 0}
     - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: RocketPF
+      value: 
+      objectReference: {fileID: 3723346684577995324, guid: eec8cb47804534ead836b63313c79dcb, type: 3}
+    - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: rocketPF
       value: 
       objectReference: {fileID: 3723346684577995324, guid: eec8cb47804534ead836b63313c79dcb, type: 3}
@@ -1661,3 +1732,4 @@ SceneRoots:
   - {fileID: 1412059426}
   - {fileID: 2034519809}
   - {fileID: 8750103716423434157}
+  - {fileID: 1806937337}

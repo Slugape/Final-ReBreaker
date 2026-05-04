@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BrickScript : MonoBehaviour
 {
-    public GameObject rocketPF;
+    public GameObject RocketPF;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,10 +22,7 @@ public class BrickScript : MonoBehaviour
             Destroy(gameObject);
             GameObject.Find("Score").GetComponent<ScoreScript>().Score += 50;
             //Debug.Log(GameObject.Find("Score").GetComponent<ScoreScript>().Score);
-            Instantiate(rocketPF, transform.position, Quaternion.identity);
-            
-            
+            Instantiate(RocketPF, transform.position, Quaternion.identity);
         }
-    
     }
 }

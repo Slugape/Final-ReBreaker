@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class RocketScript : MonoBehaviour
+public class RPickupScript : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name == "Breaker Ball")
         {
             Destroy(gameObject);
-            GameObject.Find("Breaker Ball").GetComponent<BallScript>().rocketOn  = true; 
-            Debug.Log(GameObject.Find("Breaker Ball").GetComponent<BallScript>().rocketOn);
+            GameObject.Find("Breaker Ball").GetComponent<BallScript>().RocketOn  = true; 
+            //Debug.Log(GameObject.Find("Breaker Ball").GetComponent<BallScript>().RocketOn);
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
