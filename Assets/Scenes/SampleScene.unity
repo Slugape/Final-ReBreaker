@@ -766,7 +766,6 @@ MonoBehaviour:
   BallRB: {fileID: 692627355}
   Bspeed: 20
   RocketOn: 0
-  RocketSpawn: 0
   BallRocket: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
   RocketPFB: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
   RocketShot: {fileID: 3723346684577995324, guid: afbd6fe5a2b1a4cc78cbefa1e36131d6, type: 3}
@@ -1267,7 +1266,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: m_Name
-      value: Brick1 (1)
+      value: Brick (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_TagString
+      value: Brick
       objectReference: {fileID: 0}
     - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: RocketPF
@@ -1668,7 +1671,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: m_Name
-      value: Brick1
+      value: Brick
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_TagString
+      value: Brick
       objectReference: {fileID: 0}
     - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: RocketPF
