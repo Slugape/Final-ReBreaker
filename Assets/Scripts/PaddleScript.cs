@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class PaddleScript : MonoBehaviour
 {
-        
     //For Paddle
     public Transform PaddleT;
     public float Pspeed = 8;
     private float minX = -20f;
     private float maxX = 20f;
     bool moveRight = true;
-    private 
+        
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
