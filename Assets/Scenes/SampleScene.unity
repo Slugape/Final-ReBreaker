@@ -297,13 +297,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316032017}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.012471829, y: 0.006403393, z: 0.7110835, w: 0.70296776}
-  m_LocalPosition: {x: 1.54, y: -12.84, z: 0.12}
-  m_LocalScale: {x: 1, y: 28.623795, z: 1}
+  m_LocalRotation: {x: -0.012513381, y: 0.0063310154, z: 0.706996, w: 0.7070784}
+  m_LocalPosition: {x: 2.1579, y: -12.8328, z: 0.1252}
+  m_LocalScale: {x: 1, y: 44.113304, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1412059426}
-  m_LocalEulerAnglesHint: {x: -1.527, y: -0.501, z: 90.664}
+  m_LocalEulerAnglesHint: {x: -1.527, y: -0.501, z: 90}
 --- !u!61 &316032019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -409,6 +409,75 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &431495171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_Name
+      value: Brick R
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_TagString
+      value: RBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: RocketPF
+      value: 
+      objectReference: {fileID: 3723346684577995324, guid: eec8cb47804534ead836b63313c79dcb, type: 3}
+    - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: rocketPF
+      value: 
+      objectReference: {fileID: 3723346684577995324, guid: eec8cb47804534ead836b63313c79dcb, type: 3}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147775709078791918, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +838,11 @@ MonoBehaviour:
   BallRocket: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
   RocketPFB: {fileID: 3723346684577995324, guid: 70b1cf282fe8d4274acec8f8c41f1dea, type: 3}
   RocketShot: {fileID: 3723346684577995324, guid: afbd6fe5a2b1a4cc78cbefa1e36131d6, type: 3}
+  ColorWOn: 0
+  ColorWSpawn: 0
+  BallColorW: {fileID: 0}
+  ColorWPFB: {fileID: 0}
+  ColorWFreeze: {fileID: 0}
 --- !u!58 &692627357
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1266,11 +1340,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: m_Name
-      value: Brick (1)
+      value: Brick CW
       objectReference: {fileID: 0}
     - target: {fileID: 1082358528912893504, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: m_TagString
-      value: Brick
+      value: CWBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462823796662847182, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: ColorWPF
+      value: 
+      objectReference: {fileID: 4402570941315912392, guid: 859afeb190c8a49f9ad07608c541b9f6, type: 3}
+    - target: {fileID: 4462823796662847182, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: RocketPF
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: RocketPF
@@ -1677,6 +1759,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 4462823796662847182, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
+      propertyPath: RocketPF
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9028693795243794788, guid: a8b34593e18354ad0b66886d5f34718d, type: 3}
       propertyPath: RocketPF
       value: 
@@ -1740,3 +1826,4 @@ SceneRoots:
   - {fileID: 2034519809}
   - {fileID: 8750103716423434157}
   - {fileID: 1806937337}
+  - {fileID: 431495171}

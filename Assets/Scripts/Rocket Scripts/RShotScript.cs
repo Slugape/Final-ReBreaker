@@ -29,9 +29,9 @@ public class RShotScript : MonoBehaviour
         
         //collision via Raycast
         RaycastHit2D Shothit = Physics2D.Raycast(transform.position, transform.up, Rspeed * Time.deltaTime);
-        if (Shothit.collider != null && Shothit.collider.tag == "Brick")
+        if (Shothit.collider != null && Shothit.collider.gameObject.GetComponent<BrickScript>())
             {
-                Destroy(Shothit.collider.gameObject);
+                Shothit.collider.gameObject.GetComponent<BrickScript>().BrickDestruction();
                 Destroy(gameObject);
                 GameObject.Find("Score").GetComponent<ScoreScript>().Score += 100;
                // Debug.Log("ray hit" + Shothit.collider.gameObject.name);

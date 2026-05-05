@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4409263128287573288}
   - component: {fileID: 2121126772590919933}
   m_Layer: 0
-  m_Name: CW
+  m_Name: CWPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10550486aeb8d4f7abc14332d77ea9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CWScript
+  radius: 0
+  angle: 0
+  hue: 0
+  saturation: 0
 --- !u!212 &6160968193780416068
 SpriteRenderer:
   serializedVersion: 2
@@ -157,7 +161,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

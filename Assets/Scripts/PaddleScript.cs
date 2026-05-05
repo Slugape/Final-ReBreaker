@@ -8,7 +8,7 @@ public class PaddleScript : MonoBehaviour
     private float minX = -20f;
     private float maxX = 20f;
     bool moveRight = true;
-        
+    public bool PFreeze = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,27 +18,31 @@ public class PaddleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Paddle Movement
-        if (PaddleT.position.x > maxX)
+        if (PFreeze == false)
         {
-            moveRight = false;
-           // Debug.Log("full right");
-        }
-        if (PaddleT.position.x < minX)
-        {
-            moveRight = true;
-            //Debug.Log("full left");
-        }
-        if (moveRight)
-        {
-            PaddleT.position = new Vector3(PaddleT.position.x + Pspeed * Time.deltaTime, PaddleT.position.y,
-                PaddleT.position.z); 
-        }
-        else 
-        {
-            PaddleT.position = new Vector3(PaddleT.position.x - Pspeed * Time.deltaTime, PaddleT.position.y,
-                PaddleT.position.z); 
-        }
+            //Paddle Movement
+            if (PaddleT.position.x > maxX)
+            {
+                moveRight = false;
+                // Debug.Log("full right");
+            }
 
+            if (PaddleT.position.x < minX)
+            {
+                moveRight = true;
+                //Debug.Log("full left");
+            }
+
+            if (moveRight)
+            {
+                PaddleT.position = new Vector3(PaddleT.position.x + Pspeed * Time.deltaTime, PaddleT.position.y,
+                    PaddleT.position.z);
+            }
+            else
+            {
+                PaddleT.position = new Vector3(PaddleT.position.x - Pspeed * Time.deltaTime, PaddleT.position.y,
+                    PaddleT.position.z);
+            }
+        }
     }
 }

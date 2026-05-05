@@ -3,26 +3,51 @@ using UnityEngine;
 public class BrickScript : MonoBehaviour
 {
     public GameObject RocketPF;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+
+    public GameObject ColorWPF;
     
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-    
+    //Ball impact
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Breaker Ball")
+        if (collision.gameObject.name == "Breaker Ball") 
+        {
+            BrickDestruction();
+        }
+    }
+    
+    //Brick type destroyed and Score + Powerup
+   public void BrickDestruction()
+    {
+        if (gameObject.tag == "Brick")
         {
             Destroy(gameObject);
             GameObject.Find("Score").GetComponent<ScoreScript>().Score += 50;
-            //Debug.Log(GameObject.Find("Score").GetComponent<ScoreScript>().Score);
+            Debug.Log(GameObject.Find("Score").GetComponent<ScoreScript>().Score);
+        }
+        if (gameObject.tag == "RBrick")
+        {
+            Destroy(gameObject);
+            GameObject.Find("Score").GetComponent<ScoreScript>().Score += 50;
+            Debug.Log(GameObject.Find("Score").GetComponent<ScoreScript>().Score);
             Instantiate(RocketPF, transform.position, Quaternion.identity);
         }
+        if (gameObject.tag == "CWBrick")
+        {
+            Destroy(gameObject);
+            GameObject.Find("Score").GetComponent<ScoreScript>().Score += 50;
+            Debug.Log(GameObject.Find("Score").GetComponent<ScoreScript>().Score);
+            Instantiate(ColorWPF, transform.position, Quaternion.identity);
+        }
     }
-}
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+} 
