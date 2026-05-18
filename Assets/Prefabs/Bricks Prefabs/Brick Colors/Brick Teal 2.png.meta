@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 967ca0add13714707b9f98bdf53b5e14
+guid: 42b933e22f7904ea0b7409c8037c8cb8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3011869301351494817
-    second: Paddle_0
+      213: -6536883705064118668
+    second: Brick Teal 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paddle_0
+      name: Brick Teal 2_0
       rect:
         serializedVersion: 2
-        x: 675
-        y: 1195
-        width: 522
-        height: 82
+        x: 109
+        y: 928
+        width: 356
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5b4a07f3d0b336d0800000000000000
-      internalID: -3011869301351494817
+      spriteID: 4762d9577e25845a0800000000000000
+      internalID: -6536883705064118668
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Paddle_0: -3011869301351494817
+      Brick Teal 2_0: -6536883705064118668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
